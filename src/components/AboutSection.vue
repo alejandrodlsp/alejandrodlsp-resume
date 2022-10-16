@@ -1,5 +1,5 @@
 <template>
-  <div class="about" id="about">
+  <section class="fullpage about" id="about">
     <div class="about-container">
       <div class="about-title">
         <span>Hello! <i class="about-subtitle">I'm Alex</i></span>
@@ -7,8 +7,8 @@
       </div>
       <div class="about-description">
         I am a passionate gamer from Spain 💃, which also happens to love
-        software development and videogame design and development.
-        <i>*scroll down for some of my projects!*</i> <br /><br />
+        software engineering and videogame design and development.
+        <br /><br />
         I study <b>computer games development 🎮</b> at
         <b>University of Limerick</b>, in Ireland, where I learn about
         programming and the process of creating videogames using modern day
@@ -20,22 +20,10 @@
         I also work as a 💻 <b>full stack web developer</b>, using the Ruby on
         Rails framework, and a Vue.js frontend. <br /><br />
 
-        Pellentesque ultrices pretium mattis. Proin malesuada eu tortor maximus
-        aliquam. Integer lobortis vulputate sem vel semper. Morbi sapien ex,
-        ornare tincidunt blandit a, mattis nec nisi. Pellentesque venenatis
-        metus et tellus fringilla rhoncus. Aenean nec massa eget purus congue
-        cursus ac eu quam. Praesent non arcu auctor, rhoncus ipsum eget, gravida
-        tellus. Nam sollicitudin mattis mauris. In varius, mi sit amet placerat
-        interdum, eros ipsum lacinia nunc, non condimentum purus felis ac nulla.
-        Suspendisse potenti. Donec mollis laoreet neque, ut dapibus tortor
-        efficitur sed. Cras a elit rhoncus odio viverra ultricies et eget sem.
-        Mauris ut velit et nunc elementum interdum. Suspendisse et orci id elit
-        vestibulum sagittis eu ac augue. Etiam bibendum, quam at tempus posuere,
-        velit ipsum eleifend massa, non interdum nibh lacus ac nulla. Morbi
-        luctus fermentum odio, iaculis laoreet eros vestibulum nec.<br /><br />
+        <i>*scroll down for some of my projects!*</i>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

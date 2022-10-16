@@ -1,35 +1,38 @@
 <template>
   <div class="main">
     <navbar/>
+    <scrollable-controller/>
     <div class="container">
-      <welcome/>
-      <about/>
-      <projects/>
+      <WelcomeSection/>
+      <AboutSection/>
+      <ProjectsSection/>
     </div>
   </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
-import Welcome from './components/Welcome.vue'
-import About from './components/About.vue'
-import Projects from './components/Projects.vue'
+import WelcomeSection from './components/WelcomeSection.vue'
+import AboutSection from './components/AboutSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
+import ScrollableController from "@/components/ScrollableController.vue";
 
 export default {
   name: 'App',
   
   components: {
     Navbar,
-    Welcome,
-    About,
-    Projects
-  }
+    WelcomeSection,
+    AboutSection,
+    ProjectsSection,
+    ScrollableController
+  },
 }
 </script>
 
 <style>
-main{
-  width: 100vw;
+.fullpage {
   height: 100vh;
+  width: 100%;
 }
 </style>
