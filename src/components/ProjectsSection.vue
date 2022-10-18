@@ -1,11 +1,12 @@
 <template>
   <section v-show="!error" class="fullpage projects" id="projects">
     <div class="projects-container">
-      <div class="project-title">My Projects</div>
+      <p class="section-heading stroke-shadow">My Projects</p>
       <div class="projects-block">
         <ProjectCard
-          v-for="proj in topProjects"
-          :key="proj.name"
+          v-for="(proj, index) in topProjects"
+          :index="index+1"
+          :key="index"
           :project="proj"
         />
       </div>
@@ -36,7 +37,15 @@ export default {
   },
   computed: {
     topProjects() {
-      return this.projects.filter((project) => !project.fork).slice(0, 6);
+      return this.projects.filter((project) =>
+        !project.fork &&
+        !project.private &&
+        project.name != "alejandrodlsp"
+      ).sort(function(x, y) {
+        if(x.stargazers_count < y.stargazers_count) return 1
+        if(x.stargazers_count > y.stargazers_count) return -1
+        return 0
+      }).slice(0, 8);
     }
   },
   data() {
@@ -56,20 +65,9 @@ export default {
   height: auto;
   width: 100%;
   background-color: $color-bg-projects;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.projects::before {
-  content: "";
-  position: absolute;
-  bottom: calc(-100vh - 70px);
-  right: 0;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(to top, $color-bg-projects, transparent);
-  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-container {
@@ -77,24 +75,37 @@ export default {
 }
 
 .projects-block {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   gap: 20px;
 }
 
 .project-title {
   font-size: 3.5rem;
-  margin-top: 6rem;
   margin-bottom: 4rem;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
   .projects-block {
+    display: flex;
     flex-direction: column;
+  }
+  .projects {
+    padding: 3rem 0 3rem 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 800px) {
+  .projects-block {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+  .projects-block {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 }
 </style>

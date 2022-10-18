@@ -6,6 +6,8 @@
       <WelcomeSection/>
       <AboutSection/>
       <ProjectsSection/>
+      <SkillsSection/>
+      <FooterSection/>
     </div>
   </div>
 </template>
@@ -16,6 +18,8 @@ import WelcomeSection from './components/WelcomeSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import ScrollableController from "@/components/ScrollableController.vue";
+import SkillsSection from "@/components/SkillsSection.vue";
+import FooterSection from "@/components/FooterSection.vue"
 
 export default {
   name: 'App',
@@ -25,7 +29,9 @@ export default {
     WelcomeSection,
     AboutSection,
     ProjectsSection,
-    ScrollableController
+    SkillsSection,
+    ScrollableController,
+    FooterSection
   },
 }
 </script>

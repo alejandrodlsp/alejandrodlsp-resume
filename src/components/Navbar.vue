@@ -3,9 +3,9 @@
     <div class="nav-container">
       <div></div>
       <div class="nav-menu">
-        <a @click="goTo('about')" class="nav-link">about</a>
-        <a @click="goTo('projects')" class="nav-link">work</a>
-        <a @click="goTo('skills')" class="nav-link">skills</a>
+        <a @click="this.emitter.emit('scrollToSection', 1)" class="nav-link">about</a>
+        <a @click="this.emitter.emit('scrollToSection', 2)" class="nav-link">work</a>
+        <a @click="this.emitter.emit('scrollToSection', 3)" class="nav-link">skills</a>
         <a href="https://www.linkedin.com/in/alejandro-de-los-santos-84152916b/" target="_blank" @mouseover="mouseHoverEnter('linkedin')" @mouseleave="mouseHoverLeave"><i id="linkedin" class="nav-icon fab fa-linkedin"></i></a>
         <a href="https://github.com/alejandrodlsp" target="_blank" @mouseover="mouseHoverEnter('github')" @mouseleave="mouseHoverLeave"><i id="github" class="nav-icon fab fa-github"></i></a>
         <a href="mailto:alejandrodlsp@hotmail.es" target="_blank" @mouseover="mouseHoverEnter('mail')" @mouseleave="mouseHoverLeave"><i id="mail" class="nav-icon fas fa-envelope"></i></a>
@@ -19,11 +19,6 @@ export default {
   name: 'Navbar',
 
   methods: {
-    goTo(id) {
-      let el = document.getElementById(id)
-      if (el) el.scrollIntoView({behavior: "smooth"});
-    },
-
     mouseHoverEnter(color) {
       if(color == "linkedin") this.setBodyClass('background-linkedin');
       if(color == "github") this.setBodyClass('background-github');
@@ -49,7 +44,7 @@ export default {
   left: 0;
   width: 100%;
   z-index: 2;
-  position: fixed;
+  position: absolute;
 }
 .nav-container {
   margin-top: 5px;
@@ -94,5 +89,10 @@ export default {
 }
 .nav-icon:hover {
   transform: scale(1.2);
+}
+@media only screen and (max-width: 400px) {
+  .nav-link {
+    font-size: 1rem;;
+  }
 }
 </style>

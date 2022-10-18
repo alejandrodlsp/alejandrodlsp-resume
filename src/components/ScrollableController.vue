@@ -20,7 +20,6 @@ export default {
       inMoveDelay: 400,
       activeSection: 0,
       offsets: [],
-      touchStartY: 0
     }
   },
 
@@ -31,12 +30,12 @@ export default {
     window.addEventListener('mousewheel', this.handleMouseWheel, {
       passive: false
     }); // Other browsers
-    window.addEventListener('touchstart', this.touchStart, {
-      passive: false
-    }); // mobile devices
-    window.addEventListener('touchmove', this.touchMove, {
-      passive: false
-    }); // mobile devices
+
+    //this.scrollToSection(this.activeSection, true);
+
+    this.emitter.on("scrollToSection", section => {
+      this.scrollToSection(section, true);
+    });
   },
 
   unmounted() {
@@ -44,8 +43,6 @@ export default {
       passive: false
     }); // Other browsers
     window.removeEventListener('DOMMouseScroll', this.handleMouseWheel); // Mozilla Firefox
-    window.removeEventListener('touchstart', this.touchStart); // mobile devices
-    window.removeEventListener('touchmove', this.touchMove); // mobile devices
   },
 
   methods: {
@@ -101,28 +98,11 @@ export default {
         this.activeSection++
       this.scrollToSection(this.activeSection, true)
     },
-
-    touchStart(e) {
-      e.preventDefault();
-      this.touchStartY = e.touches[0].clientY
-    },
-
-    touchMove(e) {
-      e.preventDefault()
-      if(this.inMove) return false;
-      const currentY = e.touches[0].clientY
-      if(this.touchStartY < currentY)
-        this.moveDown()
-      else
-        this.moveUp()
-      this.touchStartY = 0
-      return false
-    }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .sections-menu {
   position: fixed;
   right: 1rem;
@@ -146,5 +126,10 @@ transform: scale(1.3);
 .sections-menu .menu-point.active {
   opacity: 1;
   transform: scale(1.5);
+}
+@media only screen and (max-width: 1400px) {
+  .sections-menu {
+    display: none;
+  }
 }
 </style>
