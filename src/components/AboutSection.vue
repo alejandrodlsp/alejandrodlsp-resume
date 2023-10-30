@@ -128,5 +128,16 @@ export default {
   .about-title {
     font-size: 3.5rem;
   }
+
+  .about::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    background: none;
+    z-index: 3;
+  }
 }
 </style>
