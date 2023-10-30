@@ -3,7 +3,7 @@
   <span
   class="menu-point"
   :class="{active: activeSection == index}"
-  v-on:click="scrollToSection(index)"
+  v-on:click="scrollToSection(index, true)"
   v-for="(offset, index) in offsets"
   v-bind:key="index"
   >
@@ -30,8 +30,6 @@ export default {
     window.addEventListener('mousewheel', this.handleMouseWheel, {
       passive: false
     }); // Other browsers
-
-    //this.scrollToSection(this.activeSection, true);
 
     this.emitter.on("scrollToSection", section => {
       this.scrollToSection(section, true);
@@ -72,32 +70,17 @@ export default {
       }, this.inMoveDelay)
     },
 
-    handleMouseWheel: function(e) {
-      e.preventDefault()
-      if(this.inMove) return false
-
-      if(e.wheelDelta < 30) {
-        this.moveUp();
-      } else {
-        this.moveDown();
+    handleMouseWheel: function() {
+      let currentScroll = (document.documentElement.scrollTop || document.body.scrollTop)
+      let currentAccuredOffset = 0
+      for (let i = 0; i < this.offsets.length; i++) {
+        currentAccuredOffset += this.offsets[i]
+        if(currentAccuredOffset > currentScroll) {
+          this.activeSection = i;
+          break;
+        }
       }
-
-      return false;
-    },
-
-    moveDown() {
-      this.inMove = true
-      if(this.activeSection > 0)
-        this.activeSection--
-      this.scrollToSection(this.activeSection, true)
-    },
-
-    moveUp() {
-      this.inMove = true
-      if(this.activeSection < this.offsets.length - 1)
-        this.activeSection++
-      this.scrollToSection(this.activeSection, true)
-    },
+    }
   }
 }
 </script>

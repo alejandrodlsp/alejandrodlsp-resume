@@ -10,18 +10,16 @@
         software engineering and videogame design and development.
         <br /><br />
         I also work as a 💻 <b>full stack web developer</b>, using the Ruby on
-        Rails framework, and a Vue.js frontend. <br /><br />
+        Rails framework, and a Vue.js frontend. 
 
-        Over 2 years of profesional experience working in the web development sector with <b v-on:click="this.emitter.emit('scrollToSection', 3)" class="link">several programming tools</b>
+        <br /><br />
+        I am a results-oriented Ruby on Rails Engineer with a strong passion for clean and efficient code. 
+        Working as an independent contractor with ample experience in the development of full stack web applications.<br /><br />
+
+        Over 3 years of profesional experience working in the web development sector with <b v-on:click="this.emitter.emit('scrollToSection', 3)" class="link">several programming tools</b>
         and languages to deliver quality results to clients. <br /><br />
 
-        I am a recent <b>computer games development 🎮</b> graduate at
-        <b><a href="https://www.ul.ie/courses/bachelor-science-computer-games-development" target="_blank" class="link">University of Limerick</a></b> in Ireland, where I learnt about
-        programming and the process of creating videogames using modern day
-        technologies and tools. I just recently finished working on my final year project, developing a videogame engine API
-        using the <i>Julia programming language</i> and <i>OpenGL4.</i> <br/> Where I
-        implemented and learned about the inner processes of
-        what makes videogames possible, researching into computer graphics, rendering, software architechture and more. <br /><br />
+        If you would like to know more about past projects, clients and services, please <b v-on:click="this.emitter.emit('scrollToSection', 4)" class="link">get in touch</b>
       </div>
     </div>
   </section>

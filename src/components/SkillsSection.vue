@@ -4,7 +4,7 @@
     <div class="header">
       <p class="section-heading stroke-shadow">My Skills</p>
       <h3>Some of the languagues and tools I enjoy and have learnt over the years, both <i>profesionally</i> and as a <i>hobbyist.</i></h3>
-      <a href="" class="link link-secondary">
+      <a href="/resume.pdf" target="_blank" class="link link-secondary">
         <strong>You can also download my resume here 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
           <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z"/>
@@ -36,68 +36,68 @@ export default {
           name: "Fullstack Development",
           skills: [
             {
-              name: "Vue (2 yrs)",
+              name: "Vue.js",
               image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png"
             },
             {
-              name: "Ruby (2 yrs)",
+              name: "Ruby",
               image: "https://cdn-icons-png.flaticon.com/512/919/919842.png"
             },
             {
-              name: "RoR (2 yrs)",
+              name: "RoR",
               image: "https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/ruby-on-rails-512.png"
             },
             {
-              name: "PostgreSQL (2 yrs)",
+              name: "PostgreSQL",
               image: "https://user-images.githubusercontent.com/24623425/36042969-f87531d4-0d8a-11e8-9dee-e87ab8c6a9e3.png"
             },
             {
-              name: "Redis (2 yrs)",
+              name: "Redis",
               image: "https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png"
             },
             {
-              name: "HTML5 (2 yrs)",
+              name: "HTML5",
               image: "https://cdn-icons-png.flaticon.com/512/1216/1216733.png"
             },
             {
-              name: "CSS (2.5 yrs)",
+              name: "CSS",
               image: "https://cdn-icons-png.flaticon.com/512/732/732190.png"
             },
             {
-              name: "JavaScript (2.5 yrs)",
+              name: "JavaScript",
               image: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
             },
             {
-              name: "TypeScript (2 yrs)",
+              name: "TypeScript",
               image: "https://play-lh.googleusercontent.com/BbuKPu-946B_nkgFYcE4Y-uxbfoUm8SWNM4j7jMWoCS-jk8TFQWeLTfbLsn6umaQn38"
             },
           ]
         },
         {
-          name: "Languages & Frameworks",
+          name: "Other development",
           skills: [
             {
-              name: "Java (4 yrs)",
+              name: "Java",
               image: "https://cdn-icons-png.flaticon.com/512/5968/5968282.png"
             },
             {
-              name: "C# (4 yrs)",
+              name: "C#",
               image: "https://static-00.iconduck.com/assets.00/c-sharp-c-icon-456x512-9sej0lrz.png"
             },
             {
-              name: "Julia (1 year)",
+              name: "Julia",
               image: "https://avatars.githubusercontent.com/u/743164?s=400&v=4"
             },
             {
-              name: "Python (2 yrs)",
+              name: "Python",
               image: "https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
             },
             {
-              name: "Selenium (1 year)",
+              name: "Selenium",
               image: "https://static-00.iconduck.com/assets.00/selenium-icon-512x496-obrnvg2v.png"
             },
             {
-              name: "Unity (4 yrs)",
+              name: "Unity",
               image: "https://cdn-icons-png.flaticon.com/512/5969/5969294.png"
             }
           ]
@@ -179,12 +179,6 @@ export default {
 
 .header > h3 {
   color: white;
-}
-
-.header > h3 > i {
-  color: $color-burdungy;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: $color-white;
 }
 
 .header > a {

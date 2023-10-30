@@ -4,7 +4,7 @@
         <div class="section-heading stroke-shadow">Get In Touch</div>
         <div class="subtitle">
           <h3>
-            Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+            My inbox is always open to new project proposals. Whether you have a question or just want to say hi, don't hesitate to contact me.
           </h3>
         </div>
         <a href='mailto:alejandrodlsp@hotmail.es'><button class="submit-feedback"><strong>Say Hello</strong></button></a>
